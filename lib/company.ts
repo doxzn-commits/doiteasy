@@ -15,8 +15,8 @@ export const company = {
   // business registration
   ceo: "도유진",
   bizNumber: "837-26-02074",
-  // 통신판매업 신고번호 — 사용자 확인 후 채움. 값이 비어 있으면 푸터에서 해당 줄 자동 생략.
-  mailOrderNumber: "",
+  // 통신판매업 신고번호 (정부24 신고증 기준)
+  mailOrderNumber: "2026-서울동대문-1011",
   address: "서울특별시 동대문구 천호대로 249, 803호(답십리동)",
   email: "contact.doiteasy@gmail.com",
 } as const;
