@@ -65,9 +65,11 @@ export const products: Product[] = [
     nameEn: "Buzzerbeater",
     tagline: "정확한 순간에 버저를 눌러라. 0.001초로 갈리는 승부.",
     description:
-      "목표 시간이 주어지고 초시계가 흐를 때, 정확한 순간에 버저를 누르는 타이밍 게임입니다. 허용 오차 안에 들면 다음 스테이지로, 정확히 맞추면 PERFECT. 앱인토스(Apps in Toss) 미니앱으로 만들고 있습니다.",
-    platform: "앱인토스 (Toss)",
-    status: "개발 중",
+      "목표 시간이 주어지고 초시계가 흐를 때, 정확한 순간에 버저를 누르는 타이밍 게임입니다. 허용 오차 안에 들면 다음 스테이지로, 정확히 맞추면 PERFECT. 하트를 모두 잃으면 끝나고, 총점으로 전체 이용자와 순위를 겨룹니다.",
+    platform: "iOS",
+    status: "App Store 출시",
+    href: "https://apps.apple.com/kr/app/id6794667372",
+    hrefLabel: "App Store 에서 열기",
     accent: "#7A5CFF",
   },
 ];
