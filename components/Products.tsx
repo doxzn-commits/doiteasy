@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { products, type Product } from "@/lib/company";
 
 function Emblem({ id, accent }: { id: string; accent: string }) {
@@ -83,6 +84,15 @@ function ProductCard({ p }: { p: Product }) {
           <p className="mt-3 leading-relaxed text-muted">{p.description}</p>
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
             <span className="text-sm text-muted">{p.platform}</span>
+            {p.detailHref && (
+              <Link
+                href={p.detailHref}
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand transition-transform hover:translate-x-0.5"
+              >
+                자세히 보기
+                <span aria-hidden="true">→</span>
+              </Link>
+            )}
             {p.href && (
               <a
                 href={p.href}

@@ -31,6 +31,9 @@ export type Product = {
   status: string;
   href?: string;
   hrefLabel?: string;
+  /* 우리 사이트 안의 제품 상세 페이지. 검색 유입을 받을 문서이므로
+     홈에서 크롤 가능한 내부 링크가 반드시 하나는 있어야 한다. */
+  detailHref?: string;
   accent: string; // decorative accent color for the product card
 };
 
@@ -70,6 +73,7 @@ export const products: Product[] = [
     status: "App Store 출시",
     href: "https://apps.apple.com/kr/app/id6794667372",
     hrefLabel: "App Store 에서 열기",
+    detailHref: "/buzzerbeater",
     accent: "#7A5CFF",
   },
 ];
