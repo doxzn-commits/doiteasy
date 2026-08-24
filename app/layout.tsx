@@ -20,7 +20,7 @@ const pretendard = localFont({
 
 const title = `${company.name} (${company.nameEn}) — ${company.tagline}`;
 const description =
-  "두잇이지는 복잡한 것을 간단하게 만드는 1인 개발 스튜디오입니다. 체험단 관리 서비스 체체, 익명 일기 앱 요옆, 타이밍 게임 버저비터를 만듭니다.";
+  "두잇이지는 복잡한 것을 간단하게 만드는 1인 개발 스튜디오입니다. 타이밍 게임 버저비터, 체험단 관리 서비스 체체, 익명 일기 앱 요옆, 동거인 가계·생활 앱 아월렛, 혼잡 예측 여행 설계 여백을 만듭니다.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,9 +33,11 @@ export const metadata: Metadata = {
   keywords: [
     "두잇이지",
     "DOITEASY",
+    "버저비터",
     "체체",
     "요옆",
-    "버저비터",
+    "아월렛",
+    "여백",
     "1인 개발",
     "앱 개발 스튜디오",
   ],
@@ -97,6 +99,7 @@ function OrganizationJsonLd() {
         description: p.tagline,
         operatingSystem: p.platform,
         applicationCategory: "MobileApplication",
+        ...(p.icon ? { image: `${SITE_URL}${p.icon.src}` } : {}),
         ...(p.href ? { url: p.href } : {}),
       },
     })),

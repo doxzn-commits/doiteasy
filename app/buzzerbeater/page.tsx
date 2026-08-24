@@ -57,6 +57,10 @@ const jsonLd = {
   url: `${SITE_URL}/buzzerbeater`,
   downloadUrl: APP_STORE_URL,
   installUrl: APP_STORE_URL,
+  /* 스토어에 제출한 것과 같은 아이콘·화면. 지어낸 이미지가 아니라
+     실제 배포물이므로 구조화 데이터에 그대로 쓴다. */
+  image: `${SITE_URL}${app.icon!.src}`,
+  screenshot: app.shots!.map((s) => `${SITE_URL}${s.src}`),
   description,
   inLanguage: "ko",
   offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
@@ -73,12 +77,9 @@ const jsonLd = {
   },
 };
 
-const shots = [
-  { src: "/buzzerbeater/game.png", alt: "버저비터 게임 화면 — 목표 시간과 흐르는 초시계, 중앙의 버저 버튼" },
-  { src: "/buzzerbeater/perfect.png", alt: "버저비터 PERFECT 판정 화면 — 오차 없이 맞췄을 때의 보너스 연출" },
-  { src: "/buzzerbeater/rank.png", alt: "버저비터 시즌 랭킹 화면 — 전체 이용자와 총점으로 겨루는 순위표" },
-  { src: "/buzzerbeater/skins.png", alt: "버저비터 버저 보관함 — 점수로 해금하는 버저 디자인 목록" },
-];
+/* 화면 이미지는 lib/company.ts 가 단일 출처다. 홈 카드와 이 페이지가 같은
+   파일·같은 대체 텍스트를 쓰도록 여기서 복제하지 않는다. */
+const shots = app.shots!;
 
 const specials = [
   { name: "BLIND", desc: "초시계가 중간에 사라집니다. 눈이 아니라 몸이 기억한 박자로 눌러야 합니다." },
@@ -184,10 +185,11 @@ export default function BuzzerbeaterPage() {
 
             <div className="justify-self-center">
               <Image
-                src="/buzzerbeater/game.png"
+                src={shots[0].src}
                 alt={shots[0].alt}
-                width={636}
-                height={1048}
+                width={shots[0].width}
+                height={shots[0].height}
+                sizes="(max-width: 639px) 240px, 280px"
                 priority
                 className="w-[240px] rounded-[28px] border border-line shadow-[0_40px_80px_-48px_rgba(20,22,29,0.5)] sm:w-[280px]"
               />
@@ -281,8 +283,9 @@ export default function BuzzerbeaterPage() {
                 <Image
                   src={s.src}
                   alt={s.alt}
-                  width={636}
-                  height={1048}
+                  width={s.width}
+                  height={s.height}
+                  sizes="(max-width: 639px) 45vw, (max-width: 1023px) 44vw, 244px"
                   className="w-full rounded-[20px] border border-line"
                 />
               </li>

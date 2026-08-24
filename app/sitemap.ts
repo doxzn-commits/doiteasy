@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/company";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date("2026-07-23");
+  const now = new Date("2026-08-24");
   return [
     {
       url: `${SITE_URL}/`,
