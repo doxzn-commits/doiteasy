@@ -20,7 +20,7 @@ const pretendard = localFont({
 
 const title = `${company.name} (${company.nameEn}) — ${company.tagline}`;
 const description =
-  "두잇이지는 복잡한 것을 간단하게 만드는 1인 개발 스튜디오입니다. 타이밍 게임 버저비터, 체험단 관리 서비스 체체, 익명 일기 앱 요옆, 동거인 가계·생활 앱 아월렛, 혼잡 예측 여행 설계 여백을 만듭니다.";
+  "두잇이지는 복잡한 것을 간단하게 만드는 1인 개발 스튜디오입니다. 타이밍 게임 버저비터, 체험단 관리 서비스 체체, 익명 일기 앱 요옆, 둘이 사는 집 앱 캘런스, 혼잡 예측 여행 설계 여백을 만듭니다.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "버저비터",
     "체체",
     "요옆",
-    "아월렛",
+    "캘런스",
     "여백",
     "1인 개발",
     "앱 개발 스튜디오",

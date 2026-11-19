@@ -39,8 +39,8 @@ function Emblem({ id, accent }: { id: string; accent: string }) {
       </svg>
     );
   }
-  if (id === "owlet") {
-    // a roof over two eyes → 한 지붕 아래 두 사람 (올빼미이자 집)
+  if (id === "calance") {
+    // a roof over two eyes → 한 지붕 아래 두 사람
     return (
       <svg {...common}>
         <path d="M3 12 14 4l11 8" />

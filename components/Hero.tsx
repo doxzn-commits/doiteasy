@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // The signature. A quiet building at dusk whose windows warm up one by one —
 // "the moment the lights come on." Ties the products together (요옆's lit
-// windows, 아월렛's one roof, 체체's clarity, 버저비터's spark) and the brand
+// windows, 캘런스's one roof, 체체's clarity, 버저비터's spark) and the brand
 // idea: the fog clears,
 // something lights up. Motion is concentrated here and here only.
 const COLS = 6;

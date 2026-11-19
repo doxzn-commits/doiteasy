@@ -101,7 +101,7 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex", fontSize: 27, fontWeight: 500, color: MUTED }}>
-            버저비터 · 체체 · 요옆 · 아월렛 · 여백
+            버저비터 · 체체 · 요옆 · 캘런스 · 여백
           </div>
           <div style={{ display: "flex", fontSize: 22, fontWeight: 500, color: MUTED }}>
             1인 개발 스튜디오

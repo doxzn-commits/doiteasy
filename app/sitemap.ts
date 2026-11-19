@@ -18,6 +18,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/calance`,
+      lastModified: new Date("2026-11-19"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/calance/support`,
+      lastModified: new Date("2026-11-19"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE_URL}/privacy`,
       lastModified: now,
       changeFrequency: "yearly",

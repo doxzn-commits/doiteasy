@@ -1,4 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/calance", "destination": "/calance/index.html" },
+    { "source": "/calance/support", "destination": "/calance/support/index.html" },
+    { "source": "/calance/privacy", "destination": "/calance/privacy/index.html" },
+    { "source": "/calance/terms", "destination": "/calance/terms/index.html" },
+    { "source": "/calance/delete", "destination": "/calance/delete/index.html" },
+    { "source": "/calance/i/:code", "destination": "/calance/i/index.html" }
+  ]
 }
